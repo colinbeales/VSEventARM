@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <META content="IE=11.0000" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <LINK href="/4e4476d1.favicon.ico" rel="shortcut icon">
+    <META name="description" content="Visual Studio UK Events details the events currently available from the Visual Studio UK team.">
+    <META name="robots" content="noindex, nofollow"><!-- SOCIAL META -->
+    <META content="Visual Studio UK Events" property="og:title">
+    <META content="Visual Studio UK Events" property="og:site_name">
+    <META content="Visual Studio UK Events details the events currently available from the Visual Studio UK team." property="og:description">
+    <META content="http://vsukevents.azurewebsites.net" property="og:url">
+    <META content="/images/project-spartan-devices-fb.jpg" property="og:image">
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <DIV class="bg-wrap">
+        <HEADER class="section section--image-banner section--summit-intro"
+                role="banner">
+            <DIV class="image-banner__background">
+                <IMG class="image-banner__background__image"
+                     alt="Photo of the Open day venue" src="~/content/images/building-banner-xl.jpg">
+            </DIV>
+            <DIV class="container">
+                <DIV class="tile image-banner__tile summit-intro__tile">
+                    <DIV class="summit-intro__tile__body">
+                        <H1>Application Lifecycle Management and DevOps with Visual Studio</H1>
+                        <H2>
+                            Various UK wide deliveries<br>
+                            9.30 am - 4.30 pm
+                        </H2>
+                    </DIV>
+                    <DIV class="tile__bar summit-intro__tile__bar">
+                        <UL class="summit-intro__tile__nav">
+                            <LI>
+                                <A href="#about-the-summit"
+                                   data-target="about-the-summit" data-scroll="">About</A>
+                            </LI>
+                            <LI>
+                                <A href="#location" data-target="location"
+                                   data-scroll="">Locations / Registration</A>
+                            </LI>
+                            <LI>
+                                <A href="#agenda" data-target="agenda"
+                                   data-scroll="">Agenda</A>
+                            </LI>
+                            <LI>
+                                <A href="#faq" data-target="faq"
+                                   data-scroll="">FAQ</A>
+                            </LI>
+                        </UL>
+                    </DIV>
+                </DIV>
+            </DIV>
+        </HEADER>
+
+
+        @RenderBody()
+
+
+    </DIV>
+
+    <FOOTER class="footer" role="contentinfo">
+        <DIV class="container">
+            <SMALL class="copyright caption">
+                © 2015 Microsoft
+            </SMALL>
+        </DIV>
+    </FOOTER>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

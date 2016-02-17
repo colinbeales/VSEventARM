@@ -1,0 +1,192 @@
+@model IEnumerable<VSEventsWeb.Models.AgendaItem>
+
+@{
+    ViewBag.Title = "ALM and DevOps with VS2015";
+}
+
+<DIV class="content" role="main">
+    <!-- ABOUT --><SECTION class="section section--about-summit" id="about-the-summit" role="region">
+        <DIV class="container">
+            <DIV class="section__body">
+                <DIV class="layout layout--basic">
+                    <DIV class="module module--secondary about-summit__secondary">
+                        <H2 class="heading">Not our eventt</H2>
+                        <IMG alt="Screenshots of the agile tools" src="~/Content/images/AgileTools.png">
+                    </DIV>
+                    <DIV class="module module--primary about-summit__primary">
+                        <DIV class="layout layout--halves">
+                            <UL class="list--about-summit">
+                                <LI class="module">
+                                    <H3 class="about-summit__title">Full Day Event</H3>
+                                    <P class="about-summit__description">
+                                        This full day event looks to take you through the end-to-end application lifecycle with Microsoft tooling taking an application from requirments, development to automated release and testing.
+                                    </P>
+                                </LI>
+                                <LI class="module">
+                                    <H3 class="about-summit__title">World Class Speakers</H3>
+                                    <P class="about-summit__description">
+                                        Each event will have be hosted by expert speakers, including our Microsoft Visual Studio Technical Specialists joined with industry experts from our gold partners accross the UK.
+                                    </P>
+                                </LI>
+                                <LI class="module">
+                                    <H3 class="about-summit__title">See what’s new</H3>
+                                    <P class="about-summit__description">Expect each session to delve into deails on the Application Lifecycle using the latest tooling delivered by Visual Studio 2015.</P>
+                                </LI>
+                                <LI class="module">
+                                    <H3 class="about-summit__title">Ask Questions</H3>
+                                    <P class="about-summit__description">Each session is informal allowing attendees to ask questions and share their own experiences using the tools. </P>
+                                </LI>
+                            </UL>
+                        </DIV>
+                    </DIV>
+                </DIV>
+            </DIV>
+        </DIV>
+    </SECTION><!-- FOCUS AREAS --><SECTION class="section section--focus" id="focus-areas" role="region">
+        <DIV class="subsection">
+            <DIV class="subsection__subheader">
+                <DIV class="container">
+                    <H2>What you’ll learn</H2>
+                </DIV>
+            </DIV>
+            <DIV class="subsection__body">
+                <DIV class="focus-areas">
+                    <DIV class="container">
+                        <DIV class="focus-areas__bar">
+                            <DIV class="tile focus-areas__bar__tile">
+                                <DIV class="focus-areas__bar__tile__content">
+                                    <H3>
+                                        How to set-up and project manage an Agile project using either Scrum or Kanban
+                                    </H3>
+                                </DIV>
+                            </DIV>
+                            <DIV class="tile focus-areas__bar__tile">
+                                <DIV class="focus-areas__bar__tile__content">
+                                    <H3>
+                                        Delve into Visual Studio tools to increase code quality accross your applications
+                                    </H3>
+                                </DIV>
+                            </DIV>
+                            <DIV class="tile focus-areas__bar__tile">
+                                <DIV class="focus-areas__bar__tile__content">
+                                    <H3>
+                                        Learn how to exploit the build system and provide repeatable automated deployments to on-premises or cloud environments
+                                    </H3>
+                                </DIV>
+                            </DIV>
+                            <DIV class="tile focus-areas__bar__tile">
+                                <DIV class="focus-areas__bar__tile__content">
+                                    <H3>
+                                        Harness key cloud based services like load testing and application insights to test and monitor applications
+                                    </H3>
+                                </DIV>
+                            </DIV>
+                        </DIV>
+                    </DIV>
+                </DIV>
+            </DIV>
+        </DIV>
+    </SECTION><!-- REGISTER -->
+    <!-- LOCATION -->
+    <SECTION class="section section--banner section--banner--light section--summit-location" id="location" role="region">
+        <DIV class="container">
+            <DIV class="subsection__header">
+                <H2>Event Locations</H2>
+            </DIV>
+            <DIV class="subsection__body">
+                <DIV class="layout layout--halves">
+
+                    <DIV class="module session">
+                        <DIV class="session__avatars clear">
+                            <DIV class="avatar session__avatar">
+                                <IMG alt="VS Logo"
+                                     src="~/Content/images/VSLogo-sm.png">
+                            </DIV>
+                        </DIV>
+                        <DIV class="session__content">
+                            <H3 class="session__title">8/9/15 - Reading</H3>
+                            <P class="session__description">Microsoft Campus, Thames Valley Park</P>
+                            <P class="subtitle session__presenters">
+                                <A title="Registration link"
+                                   href="http://www.eventbrite.com">Register</A>
+                            </P>
+                        </DIV>
+                    </DIV>
+
+                    <DIV class="module session">
+                        <DIV class="session__avatars clear">
+                            <DIV class="avatar session__avatar">
+                                <IMG alt="VS Logo"
+                                     src="~/Content/images/VSLogo-sm.png">
+                            </DIV>
+                        </DIV>
+                        <DIV class="session__content">
+                            <H3 class="session__title">10/9/15 - London</H3>
+                            <P class="session__description">Cardinal Place, Victoria</P>
+                            <P class="subtitle session__presenters">
+                                <A title="Registration link"
+                                   href="http://www.eventbrite.com">Register</A>
+                            </P>
+                        </DIV>
+                    </DIV>
+
+                </DIV>
+            </DIV>
+
+        </DIV>
+    </SECTION>
+
+    <!-- SCHEDULE --><SECTION class="section section--banner section--summit-schedule" id="agenda" role="region">
+        <DIV class="container">
+            <DIV class="section__header">
+                <H2>Agenda</H2>
+                <H3>Agenda times subject to change.</H3>
+            </DIV>
+            <table class="summit-schedule__panel__table">
+                <thead>
+                    <tr>
+                        <th scope="col">ALM and DevOps with Visual Studio 2015</th>
+                        <th scope="col"></th>
+                    </tr>
+                <tbody>
+@foreach (var item in Model)
+{
+                    <tr>
+                        <td scope="row">@Html.DisplayFor(modelItem => item.Timeslot)</td>
+                        <td class="cell--social" colspan="3">@Html.DisplayFor(modelItem => item.Description)</td>
+                    </tr>
+}
+                </tbody>
+            </table>
+        </DIV>
+    </SECTION>
+
+    <!-- SESSIONS -->
+    <SECTION class="section section--summit-sessions" id="faq" role="region">
+        <DIV class="container">
+            <DIV class="section__header">
+                <H2>FAQ</H2>
+            </DIV>
+            <DIV class="section__body">
+                <DIV class="layout layout--equal">
+                    <DIV class="module">
+                        <IMG class="summit-location__image" alt="Venue image"
+                             src="~/Content/images/venue-md.jpg" srcset="~/Content/images/venue-md.jpg 400w, ~/Content/images/venue-md.jpg 800w">
+                    </DIV>
+                    <DIV class="module">
+                        <H3>Will food be provideed?</H3>
+                        <P>Lunch will be provided. Please let us know upon registration if you have any food requirements or allergies</P>
+                    </DIV>
+                    <DIV class="module">
+                        <H3>Is there a dress code?</H3>
+                        <P>
+                            The event is informal, please feel free to wear whatever you feel comfortable in.
+                        </p>
+                    </DIV>
+                </DIV>
+            </DIV>
+
+        </DIV>
+    </SECTION>
+</DIV>
+    
